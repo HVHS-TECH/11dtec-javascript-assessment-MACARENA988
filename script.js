@@ -3,6 +3,7 @@ console.log("Hello world!")
 
 //Varibles
 
+let userOrder = ["Eggs", "Steak", "Avocado", "Raw milk", "Banana", "Cheese"];
 /****************************
 Main code:
 ****************************/
@@ -17,8 +18,9 @@ Functions:
 
 function getFormInput() {
     const ORDER_FIELD = document.getElementById("orderField");
-    let userOrder = Number(ORDER_FIELD_FIELD.value);
-    OUTPUT.innerHTML = "<p>You have " + userOrder + ".</p>";
+    let userOrder = Number(ORDER_FIELD.value);
+
+    OUTPUT.innerHTML = "1. "+ userOrder[userOrder]+ "2. "<br>";
   
    
   }
