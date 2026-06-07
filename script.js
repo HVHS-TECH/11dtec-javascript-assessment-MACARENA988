@@ -1,15 +1,15 @@
 console.log("script.js")
 console.log("Hello world!")
-
+const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 //Varibles
 
-let userOrder = ["Eggs", "Steak", "Avocado", "Raw milk", "Banana", "Cheese"];
+let userNumber = ["Eggs", "Steak", "Avocado", "Raw milk", "Banana", "Cheese"];
 /****************************
 Main code:
 ****************************/
 
 
-const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+
 /****************************
 Functions:
 ****************************/
@@ -18,9 +18,11 @@ Functions:
 
 function getFormInput() {
     const ORDER_FIELD = document.getElementById("orderField");
-    let userOrder = Number(ORDER_FIELD.value);
+    const NAME_FIELD = document.getElementById("nameField");
+    let order = Number(ORDER_FIELD.value);
+    let name = NAME_FIELD.value;
 
-    OUTPUT.innerHTML = "1. "+ userOrder[userOrder]+ "2. "<br>";
-  
-   
-  }
+    OUTPUT.innerHTML = "Thanks "+name+" for ordering at Jacob's auraful cafe.<br>";
+    OUTPUT.innerHTML += "You ordered "+ userNumber[order-1]+ ".<br>";
+
+}
