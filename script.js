@@ -3,12 +3,14 @@ console.log("Hello world!")
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 //Varibles
 /****************************
-let Eggs = 5;
-let Steak = 20;
-let Avocado = 1;
-let Raw milk = 10; 
+Eggs = 5
+Steak = 20
+Avocado = 1
+Raw milk = 10
 ****************************/
-let userNumber = ["Eggs", "Steak", "Avocado", "Raw milk"];
+let userNumber = ["eggs", "steak", "avocado", "raw milk"];
+
+let price = [5, 20, 1, 10];
 /****************************
 Main code:
 ****************************/
@@ -18,7 +20,10 @@ Main code:
 /****************************
 Functions:
 ****************************/
-
+function calculateChange(_money, _price) {
+  let change = _money - _price;
+  return change;
+}
 
 function getFormInput() {
     const NAME_FIELD = document.getElementById("nameField");
@@ -26,23 +31,17 @@ function getFormInput() {
     const MONEY_FIELD = document.getElementById("moneyField");
     let name = NAME_FIELD.value;
     let order = Number(ORDER_FIELD.value);
+    let cost = Number(ORDER_FIELD.value);
     let money = Number(MONEY_FIELD.value);
 
-    OUTPUT.innerHTML = "Come back anytime "+ name +", we appriciate you for ordering at Dietmaxxing.<br>";
-    OUTPUT.innerHTML += "You ordered "+ userNumber[order-1] + ".<br>";
-    OUTPUT.innerHTML += "Your money is " + money + ".<br>";
+    OUTPUT.innerHTML = "<p>Come back anytime "+ name +", we apprieciate you for ordering at Dietmaxxing.";
+    OUTPUT.innerHTML += "You ordered "+ userNumber[order-1] + ".</p>";
+    
+    if (money >= price[cost]) {
+      OUTPUT.innerHTML += "You will get $" + calculateChange (money, price[cost-1]) + " change.";
+    } else {
+      OUTPUT.innerHTML += "Sorry you can't afford "+  userNumber[order-1] + "</p>";
+    }        
 
-/****************************
-    if (userMoney >= order) {
-        OUTPUT.innerHTML += "<p>You CAN afford a chocolate bar";
-        OUTPUT.innerHTML += "<p>You will get $" + calculateChange (money, order) + " change.</p>";
-      } else {
-        OUTPUT.innerHTML += "<p>Sorry you CAN'T afford a chocolate bar</p>";
-      }
-
-    function calculateChange(_money, _price) {
-        let change = _money - _price;
-        return change;
-    }
-     ****************************/   
 }
+
