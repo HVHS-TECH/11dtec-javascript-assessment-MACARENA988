@@ -37,7 +37,7 @@ function getFormInput() {
     OUTPUT.innerHTML = "<p>Come back anytime "+ name +", we apprieciate you for ordering at Dietmaxxing.";
     OUTPUT.innerHTML += "You ordered "+ userNumber[order-1] + ".</p>";
     
-    if (money >= price[cost]) {
+    if (money >= price[cost-1]) {
       OUTPUT.innerHTML += "You will get $" + calculateChange (money, price[cost-1]) + " change.";
     } else {
       OUTPUT.innerHTML += "Sorry you can't afford "+  userNumber[order-1] + "</p>";
