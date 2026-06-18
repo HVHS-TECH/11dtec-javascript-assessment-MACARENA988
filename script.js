@@ -25,23 +25,65 @@ function calculateChange(_money, _price) {
   return change;
 }
 
-function getFormInput() {
-    const NAME_FIELD = document.getElementById("nameField");
-    const ORDER_FIELD = document.getElementById("orderField");
-    const MONEY_FIELD = document.getElementById("moneyField");
-    let name = NAME_FIELD.value;
-    let order = Number(ORDER_FIELD.value);
-    let cost = Number(ORDER_FIELD.value);
-    let money = Number(MONEY_FIELD.value);
 
-    OUTPUT.innerHTML = "<p>Come back anytime "+ name +", we apprieciate you for ordering at Dietmaxxing.";
-    OUTPUT.innerHTML += "You ordered "+ userNumber[order-1] + ".</p>";
-    
-    if (money >= price[cost-1]) {
-      OUTPUT.innerHTML += "You will get $" + calculateChange (money, price[cost-1]) + " change.";
-    } else {
-      OUTPUT.innerHTML += "Sorry you can't afford "+  userNumber[order-1] + "</p>";
-    }        
+/****************************
+function getFormInput() {
+  const NAME_FIELD = document.getElementById("nameField");
+  const ORDER_FIELD = document.getElementById("orderField");
+  const MONEY_FIELD = document.getElementById("moneyField");
+  let name = NAME_FIELD.value;
+  let order = Number(ORDER_FIELD.value);
+  let cost = Number(ORDER_FIELD.value);
+  let money = Number(MONEY_FIELD.value);
+
+  OUTPUT.innerHTML = "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
+  OUTPUT.innerHTML += "You ordered " + userNumber[order - 1] + ".</p>";
+
+  if (money >= price[cost - 1]) {
+    OUTPUT.innerHTML += "You will get $" + calculateChange(money, price[cost - 1]) + " change.";
+  } else {
+    OUTPUT.innerHTML += "Sorry you can't afford " + userNumber[order - 1] + "</p>";
+  }
+
+}
+****************************/
+
+
+
+function getFormInput() {
+  const NAME_FIELD = document.getElementById("nameField");
+  const MONEY_FIELD = document.getElementById("moneyField");
+
+  const EGGS_FIELD = document.getElementById("eggsField");
+  const STEAK_FIELD = document.getElementById("steakField");
+  const AVOCADO_FIELD = document.getElementById("avocadoField");
+  const RAWMILK_FIELD = document.getElementById("rawmilkField");
+
+  let name = NAME_FIELD.value;
+
+  let money = Number(MONEY_FIELD.value);
+
+  let eggsAmount = Number(EGGS_FIELD.value);
+  let steakAmount = Number(STEAK_FIELD.value);
+  let avocadoAmount = Number(AVOCADO_FIELD.value);
+  let rawmilkAmount = Number(RAWMILK_FIELD.value);
+
+  let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
+
+  OUTPUT.innerHTML = "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
+  OUTPUT.innerHTML += "You ordered " +  + ".</p>";
+
+  if (eggsAmount >= 1) {
+    OUTPUT.innerHTML += "You will get $" + calculateChange(money, cost) + " change.";
+  } else {
+    OUTPUT.innerHTML += "Sorry you can't afford" + ".</p>";
+  }
+
+  if (money >= cost) {
+    OUTPUT.innerHTML += "You will get $" + calculateChange(money, cost) + " change.";
+  } else {
+    OUTPUT.innerHTML += "Sorry you can't afford" + ".</p>";
+  }
 
 }
 
