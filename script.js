@@ -89,10 +89,11 @@ function getFormInput() {
     if (rawmilkAmount > 0) {
     OUTPUT.innerHTML += "Raw milk:" + rawmilkAmount + "=" + rawmilkAmount * price[3];
   }
-
+<br>
   if (money >= cost) {
     OUTPUT.innerHTML += "You will get $" + calculateChange(money, cost) + " change.";
-  } 
+  }
+  <br>
   else {
     OUTPUT.innerHTML += "Sorry you can't afford" + ".</p>";
   }
