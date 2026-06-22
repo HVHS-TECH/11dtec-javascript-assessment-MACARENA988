@@ -96,42 +96,31 @@ function getFormInput() {
 }
 
 function viewOrder() {
-  const NAME_FIELD = document.getElementById("nameField");
-  const MONEY_FIELD = document.getElementById("moneyField");
 
   const EGGS_FIELD = document.getElementById("eggsField");
   const STEAK_FIELD = document.getElementById("steakField");
   const AVOCADO_FIELD = document.getElementById("avocadoField");
   const RAWMILK_FIELD = document.getElementById("rawmilkField");
 
-  let name = NAME_FIELD.value;
-
-  let money = Number(MONEY_FIELD.value);
-
   let eggsAmount = Number(EGGS_FIELD.value);
   let steakAmount = Number(STEAK_FIELD.value);
   let avocadoAmount = Number(AVOCADO_FIELD.value);
   let rawmilkAmount = Number(RAWMILK_FIELD.value);
 
-  if (eggsAmount > 0) {
-    OUTPUT.innerHTML += "Eggs:" + eggsAmount + "=" + eggsAmount * price[0];
+  let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
+
+  OUTPUT.innerHTML += "These are the items on your order:<br>";
+   if (eggsAmount > 0) {
+    OUTPUT.innerHTML += "Eggs: " + eggsAmount + " = " + eggsAmount * price[0]+"<br>";
   }
   if (steakAmount > 0) {
-    OUTPUT.innerHTML += "Steak:" + steakAmount + "=" + steakAmount * price[1];
+    OUTPUT.innerHTML += "Steak: " + steakAmount + " = " + steakAmount * price[1]+"<br>";
   }
   if (avocadoAmount > 0) {
-    OUTPUT.innerHTML += "Avocado:" + avocadoAmount + "=" + avocadoAmount * price[2];
+    OUTPUT.innerHTML += "Avocado: " + avocadoAmount + " = " + avocadoAmount * price[2]+"<br>";
   }
   if (rawmilkAmount > 0) {
-    OUTPUT.innerHTML += "Raw milk:" + rawmilkAmount + "=" + rawmilkAmount * price[3];
+    OUTPUT.innerHTML += "Raw milk: " + rawmilkAmount + " = " + rawmilkAmount * price[3]+"<br>";
   }
-
-  let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
-  
-  if (money >= cost) {
-    OUTPUT.innerHTML += "You will get $" + calculateChange(money, cost) + " change.";
-  }
-  else {
-    OUTPUT.innerHTML += "Sorry you can't afford" + ".</p>";
-  }
+  OUTPUT.innerHTML += "Total: $" + cost +"<br>";
 }
