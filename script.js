@@ -111,16 +111,16 @@ function viewOrder() {
 
   OUTPUT.innerHTML += "These are the items on your order:<br>";
    if (eggsAmount > 0) {
-    OUTPUT.innerHTML += "Eggs: " + eggsAmount + " = " + eggsAmount * price[0]+"<br>";
+    OUTPUT.innerHTML += "Eggs: " + eggsAmount + " = $" + eggsAmount * price[0]+"<br>";
   }
   if (steakAmount > 0) {
-    OUTPUT.innerHTML += "Steak: " + steakAmount + " = " + steakAmount * price[1]+"<br>";
+    OUTPUT.innerHTML += "Steak: " + steakAmount + " = $" + steakAmount * price[1]+"<br>";
   }
   if (avocadoAmount > 0) {
-    OUTPUT.innerHTML += "Avocado: " + avocadoAmount + " = " + avocadoAmount * price[2]+"<br>";
+    OUTPUT.innerHTML += "Avocado: " + avocadoAmount + " = $" + avocadoAmount * price[2]+"<br>";
   }
   if (rawmilkAmount > 0) {
-    OUTPUT.innerHTML += "Raw milk: " + rawmilkAmount + " = " + rawmilkAmount * price[3]+"<br>";
+    OUTPUT.innerHTML += "Raw milk: " + rawmilkAmount + " = $" + rawmilkAmount * price[3]+"<br>";
   }
   OUTPUT.innerHTML += "Total: $" + cost +"<br>";
 }
