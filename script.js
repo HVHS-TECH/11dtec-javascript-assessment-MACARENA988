@@ -102,7 +102,6 @@ function getFormInput() {
 
   let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
 
-  OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
   OUTPUT.innerHTML += "Name: " + name + "<br>";
   OUTPUT.innerHTML += "Here's your receipt: " + "<br>";
 
@@ -121,7 +120,9 @@ function getFormInput() {
 
   OUTPUT.innerHTML += "Total: $" + cost + "<br>";
   OUTPUT.innerHTML += "Money provided: $" + money + "<br>";
-  OUTPUT.innerHTML += "Change: $" + calculateChange(money, cost) + "<br>";
+  OUTPUT.innerHTML += "Change: $" + calculateChange(money, cost) + "<br><br>";
+
+   OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
 
 
 }
