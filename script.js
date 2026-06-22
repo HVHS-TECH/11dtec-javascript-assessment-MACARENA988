@@ -1,7 +1,6 @@
 console.log("script.js")
 console.log("Hello world!")
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-
 const MENU = document.getElementById("spaceForMenu");
 //Varibles
 /****************************
