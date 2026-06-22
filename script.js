@@ -102,7 +102,7 @@ function getFormInput() {
 
   let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
 
-  OUTPUT.innerHTML = "Name: " + name + "<br>";
+  OUTPUT.innerHTML = "<h1>Name: " + name + "</h1><br>";
   OUTPUT.innerHTML += "Here's your receipt: " + "<br>";
 
   if (eggsAmount > 0) {
