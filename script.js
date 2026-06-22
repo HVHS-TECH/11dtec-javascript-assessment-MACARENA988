@@ -118,9 +118,9 @@ function getFormInput() {
     OUTPUT.innerHTML += "Raw milk: " + rawmilkAmount + " = $" + rawmilkAmount * price[3] + "<br>";
   }
 
-  OUTPUT.innerHTML += "<h5>Total: $" + cost + "<br>";
-  OUTPUT.innerHTML += "Money provided: $" + money + "<br>";
-  OUTPUT.innerHTML += "Change: $" + calculateChange(money, cost) + "</h5><br><br>";
+  OUTPUT.innerHTML += "<h4>Total: $" + cost + "</h4><br>";
+  OUTPUT.innerHTML += "<h4>Money provided: $" + money + "</h4><br>";
+  OUTPUT.innerHTML += "<h4>Change: $" + calculateChange(money, cost) + "</h4><br><br>";
 
    OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
 
