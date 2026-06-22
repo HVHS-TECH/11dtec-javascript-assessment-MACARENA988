@@ -2,7 +2,7 @@ console.log("script.js")
 console.log("Hello world!")
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
-const menu = document.getElementById("menu");
+const MENU = document.getElementById("spaceForMenu");
 //Varibles
 /****************************
 Eggs = 5
@@ -18,7 +18,7 @@ Main code:
 ****************************/
 for (let i = 0; i < userNumber.length; i++) {
 console.log("Menu" + i + ": " + userNumber[i] + " " + price[i] +"")
-menu.innerHTML += "Menu" + i + ": " + userNumber[i] + " " + price[i] + "<br>";
+MENU.innerHTML += "Menu" + i + ": " + userNumber[i] + " " + price[i] + "<br>";
 }
 
 /****************************
