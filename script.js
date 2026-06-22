@@ -8,19 +8,21 @@ Steak = 20
 Avocado = 1
 Raw milk = 10
 ****************************/
-let userNumber = ["eggs", "steak", "avocadooo", "raw milk"];
+let userNumber = ["eggs", "steak", "avocado", "raw milk"];
 
 let price = [5, 20, 1, 10];
 /****************************
 Main code:
 ****************************/
 for (let i = 0; i < userNumber.length; i++) {
-  console.log("Menu" + i + ": " + userNumber[i] + " " + price[i] + "<br>")
+  console.log("Menu" + i + ": " + userNumber[i] + " " + price[i] +"")
 }
 
+/****************************
 for (let i = 0; i < userNumber.length; i++) {
   OUTPUT.innerHTML += "Menu" + i + ": " + userNumber[i] + " " + price[i] + "<br>";
 }
+****************************/
 
 /****************************
 Functions:
