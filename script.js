@@ -15,7 +15,7 @@ let price = [5, 20, 1, 10];
 Main code:
 ****************************/
 for (let i = 0; i < userNumber.length; i++) {
-  console.log("Menu" + i + ": " + userNumber[i] + "<br>")
+  console.log("Menu" + i + ": " + userNumber[i] + " " + price[i] + "<br>")
 }
 
 for (let i = 0; i < userNumber.length; i++) {
