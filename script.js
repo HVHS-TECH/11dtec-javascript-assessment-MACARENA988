@@ -74,7 +74,24 @@ function getFormInput() {
 
   OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
   OUTPUT.innerHTML += "Name: " + name +"<br>";
-  OUTPUT.innerHTML += "Here's your recipt: " + name +"<br>";
+  OUTPUT.innerHTML += "Here's your receipt: " + "<br>";
+
+  if (eggsAmount > 0) {
+    OUTPUT.innerHTML += "Eggs: " + eggsAmount + " = $" + eggsAmount * price[0]+"<br>";
+  }
+  if (steakAmount > 0) {
+    OUTPUT.innerHTML += "Steak: " + steakAmount + " = $" + steakAmount * price[1]+"<br>";
+  }
+  if (avocadoAmount > 0) {
+    OUTPUT.innerHTML += "Avocado: " + avocadoAmount + " = $" + avocadoAmount * price[2]+"<br>";
+  }
+  if (rawmilkAmount > 0) {
+    OUTPUT.innerHTML += "Raw milk: " + rawmilkAmount + " = $" + rawmilkAmount * price[3]+"<br>";
+  }
+
+ OUTPUT.innerHTML += "Total: $" + cost +"<br>";
+ OUTPUT.innerHTML += "Money provided: $" + money +"<br>";
+  OUTPUT.innerHTML += "Change: $" + money +"<br>";
 
 
 }
