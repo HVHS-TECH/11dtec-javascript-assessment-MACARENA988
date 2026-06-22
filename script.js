@@ -80,20 +80,21 @@ function getFormInput() {
   if (eggsAmount > 0) {
     OUTPUT.innerHTML += "Eggs:" + eggsAmount + "=" + eggsAmount * price[0];
   }
+    <br>
     if (steakAmount > 0) {
     OUTPUT.innerHTML += "Steak:" + steakAmount + "=" + steakAmount * price[1];
   }
+    <br>
     if (avocadoAmount > 0) {
     OUTPUT.innerHTML += "Avocado:" + avocadoAmount + "=" + avocadoAmount * price[2];
   }
+    <br>
     if (rawmilkAmount > 0) {
     OUTPUT.innerHTML += "Raw milk:" + rawmilkAmount + "=" + rawmilkAmount * price[3];
   }
 <br>
   if (money >= cost) {
     OUTPUT.innerHTML += "You will get $" + calculateChange(money, cost) + " change.";
-  }
-  <br>
   else {
     OUTPUT.innerHTML += "Sorry you can't afford" + ".</p>";
   }
