@@ -14,8 +14,8 @@ let price = [5, 20, 1, 10];
 /****************************
 Main code:
 ****************************/
-for(let i=0; i<userNumber.length; i++){
-console.log("Menu"+ i +": "+userNumber[i]+"<br>")
+for (let i = 0; i < userNumber.length; i++) {
+  console.log("Menu" + i + ": " + userNumber[i] + "<br>")
 }
 
 
@@ -73,26 +73,61 @@ function getFormInput() {
   let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
 
   OUTPUT.innerHTML = "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
-  OUTPUT.innerHTML += " " +  + ".</p>";
+  OUTPUT.innerHTML += " " + + ".</p>";
+  OUTPUT.innerHTML += " " + + ".</p>";
+  if (eggsAmount > 0) {
+    OUTPUT.innerHTML += "Eggs:" + eggsAmount + "=" + eggsAmount * price[0];
+  }
+  if (steakAmount > 0) {
+    OUTPUT.innerHTML += "Steak:" + steakAmount + "=" + steakAmount * price[1];
+  }
+  if (avocadoAmount > 0) {
+    OUTPUT.innerHTML += "Avocado:" + avocadoAmount + "=" + avocadoAmount * price[2];
+  }
+  if (rawmilkAmount > 0) {
+    OUTPUT.innerHTML += "Raw milk:" + rawmilkAmount + "=" + rawmilkAmount * price[3];
+  }
+  if (money >= cost) {
+    OUTPUT.innerHTML += "You will get $" + calculateChange(money, cost) + " change.";
+  }
+  else {
+    OUTPUT.innerHTML += "Sorry you can't afford" + ".</p>";
+  }
+}
 
-  OUTPUT.innerHTML += " " +  + ".</p>";
+function viewOrder() {
+  const NAME_FIELD = document.getElementById("nameField");
+  const MONEY_FIELD = document.getElementById("moneyField");
+
+  const EGGS_FIELD = document.getElementById("eggsField");
+  const STEAK_FIELD = document.getElementById("steakField");
+  const AVOCADO_FIELD = document.getElementById("avocadoField");
+  const RAWMILK_FIELD = document.getElementById("rawmilkField");
+
+  let name = NAME_FIELD.value;
+
+  let money = Number(MONEY_FIELD.value);
+
+  let eggsAmount = Number(EGGS_FIELD.value);
+  let steakAmount = Number(STEAK_FIELD.value);
+  let avocadoAmount = Number(AVOCADO_FIELD.value);
+  let rawmilkAmount = Number(RAWMILK_FIELD.value);
 
   if (eggsAmount > 0) {
     OUTPUT.innerHTML += "Eggs:" + eggsAmount + "=" + eggsAmount * price[0];
   }
-
-    if (steakAmount > 0) {
+  if (steakAmount > 0) {
     OUTPUT.innerHTML += "Steak:" + steakAmount + "=" + steakAmount * price[1];
-    }
-   
-    if (avocadoAmount > 0) {
+  }
+  if (avocadoAmount > 0) {
     OUTPUT.innerHTML += "Avocado:" + avocadoAmount + "=" + avocadoAmount * price[2];
   }
-
-    if (rawmilkAmount > 0) {
+  if (rawmilkAmount > 0) {
     OUTPUT.innerHTML += "Raw milk:" + rawmilkAmount + "=" + rawmilkAmount * price[3];
   }
 
+  let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
+  
   if (money >= cost) {
     OUTPUT.innerHTML += "You will get $" + calculateChange(money, cost) + " change.";
   }
