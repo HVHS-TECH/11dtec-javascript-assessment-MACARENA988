@@ -79,7 +79,7 @@ function viewOrder() {
   if (rawmilkAmount > 0) {
     OUTPUT.innerHTML += "Raw milk: " + rawmilkAmount + " = $" + rawmilkAmount * price[3] + "<br>";
   }
-  OUTPUT.innerHTML += "Total: $" + cost + "<br>";
+  OUTPUT.innerHTML += "Total: $" + cost + "<br><br>";
 }
 
 function getFormInput() {
@@ -102,7 +102,7 @@ function getFormInput() {
 
   let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
 
-  OUTPUT.innerHTML += "Name: " + name + "<br>";
+  OUTPUT.innerHTML = "Name: " + name + "<br>";
   OUTPUT.innerHTML += "Here's your receipt: " + "<br>";
 
   if (eggsAmount > 0) {
