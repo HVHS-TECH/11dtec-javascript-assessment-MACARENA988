@@ -19,7 +19,7 @@ for (let i = 0; i < userNumber.length; i++) {
 }
 
 for (let i = 0; i < userNumber.length; i++) {
-  OUTPUT.innerHTML += "Menu" + i + ": " + userNumber[i] + " " + price[i] +"<br>";
+  OUTPUT.innerHTML += "Menu" + i + ": " + userNumber[i] + " " + price[i] + "<br>";
 }
 
 /****************************
@@ -125,7 +125,7 @@ function getFormInput() {
   OUTPUT.innerHTML += "<h4>Money provided: $" + money + "</h4>";
   OUTPUT.innerHTML += "<h4>Change: $" + calculateChange(money, cost) + "</h4>";
 
-   OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
+  OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
 
 
 }
