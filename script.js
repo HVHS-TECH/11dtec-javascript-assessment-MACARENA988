@@ -102,7 +102,7 @@ function getFormInput() {
 
   let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
 
-  OUTPUT.innerHTML = "<h1>Name: " + name + "</h1><br>";
+  OUTPUT.innerHTML = "<h3>Name: " + name + "</h3><br>";
   OUTPUT.innerHTML += "Here's your receipt: " + "<br>";
 
   if (eggsAmount > 0) {
@@ -118,9 +118,9 @@ function getFormInput() {
     OUTPUT.innerHTML += "Raw milk: " + rawmilkAmount + " = $" + rawmilkAmount * price[3] + "<br>";
   }
 
-  OUTPUT.innerHTML += "Total: $" + cost + "<br>";
+  OUTPUT.innerHTML += "<h5>Total: $" + cost + "<br>";
   OUTPUT.innerHTML += "Money provided: $" + money + "<br>";
-  OUTPUT.innerHTML += "Change: $" + calculateChange(money, cost) + "<br><br>";
+  OUTPUT.innerHTML += "Change: $" + calculateChange(money, cost) + "</h5><br><br>";
 
    OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
 
