@@ -73,26 +73,10 @@ function getFormInput() {
   let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
 
   OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
-  OUTPUT.innerHTML += " " + + ".</p>";
-  OUTPUT.innerHTML += " " + + ".</p>";
-  if (eggsAmount > 0) {
-    OUTPUT.innerHTML += "Eggs:" + eggsAmount + "=" + eggsAmount * price[0];
-  }
-  if (steakAmount > 0) {
-    OUTPUT.innerHTML += "Steak:" + steakAmount + "=" + steakAmount * price[1];
-  }
-  if (avocadoAmount > 0) {
-    OUTPUT.innerHTML += "Avocado:" + avocadoAmount + "=" + avocadoAmount * price[2];
-  }
-  if (rawmilkAmount > 0) {
-    OUTPUT.innerHTML += "Raw milk:" + rawmilkAmount + "=" + rawmilkAmount * price[3];
-  }
-  if (money >= cost) {
-    OUTPUT.innerHTML += "You will get $" + calculateChange(money, cost) + " change.";
-  }
-  else {
-    OUTPUT.innerHTML += "Sorry you can't afford" + ".</p>";
-  }
+  OUTPUT.innerHTML += "Name: " + name +"<br>";
+  OUTPUT.innerHTML += "Here's your recipt: " + name +"<br>";
+
+
 }
 
 function viewOrder() {
