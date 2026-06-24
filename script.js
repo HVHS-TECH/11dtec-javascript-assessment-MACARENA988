@@ -15,14 +15,10 @@ let price = [5.00, 20.00, 1.00, 10.00];
 /****************************
 Main code:
 
-<label for="formSteak">$20.00: Steak</label>
-
-<br>
-<br>
 ****************************/
 for (let i = 0; i < userNumber.length; i++) {
   console.log("Item" + i + ": " + userNumber[i] + " - $" + price[i] + "")
-  MENU.innerHTML += "$" + price[i] + ":" + userNumber[i] +  "<input placeholder="Quantity..." type="number" id="steakField" name="formMoney"><br>";
+  MENU.innerHTML += "$" + price[i] + ":" + userNumber[i] +  "<input placeholder="Quantity..." type="number" id="steakField" name="formMoney"><br><br>";
 }
 
 /****************************
