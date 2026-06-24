@@ -103,6 +103,10 @@ function getFormInput() {
 
   let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
 
+  if (cost > money) {
+    OUTPUT.innerHTML += "Sorry, you can't afford this item/s.<br>";
+  } else
+
   OUTPUT.innerHTML = "<h3>Name: " + name + "</h3>";
   OUTPUT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
 
