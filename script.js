@@ -14,6 +14,11 @@ let userNumber = ["Eggs", "Steak", "Avocado", "Raw milk"];
 let price = [5, 20, 1, 10];
 /****************************
 Main code:
+
+<label for="formSteak">$20.00: Steak</label>
+<input placeholder="Quantity..." type="number" id="steakField" name="formMoney">
+<br>
+<br>
 ****************************/
 for (let i = 0; i < userNumber.length; i++) {
   console.log("Item" + i + ": " + userNumber[i] + " - $" + price[i] + "")
