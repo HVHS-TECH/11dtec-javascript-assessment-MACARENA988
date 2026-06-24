@@ -17,8 +17,8 @@ Main code:
 
 ****************************/
 for (let i = 0; i < userNumber.length; i++) {
-  console.log("$" + price[i] + ":" + userNumber[i] +  "<input placeholder="Quantity..." type="number" id="steakField" name="formMoney"><br><br>";)
-  MENU.innerHTML += "$" + price[i] + ":" + userNumber[i] +  "<input placeholder="Quantity..." type="number" id="steakField" name="formMoney"><br><br>";
+  console.log("$" + price[i] + ":" + userNumber[i] +  '<input placeholder="Quantity..." type="number" id="steakField" name="formMoney"><br><br>')
+  //MENU.innerHTML += "$" + price[i] + ":" + userNumber[i] +  "<input placeholder="Quantity..." type="number" id="steakField" name="formMoney"><br><br>";
 }
 
 /****************************
