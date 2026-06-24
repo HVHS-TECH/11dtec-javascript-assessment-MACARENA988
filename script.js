@@ -11,18 +11,18 @@ Raw milk = 10
 ****************************/
 let userNumber = ["Eggs", "Steak", "Avocado", "Raw milk"];
 
-let price = [5, 20, 1, 10];
+let price = [5.00, 20.00, 1.00, 10.00];
 /****************************
 Main code:
 
 <label for="formSteak">$20.00: Steak</label>
-<input placeholder="Quantity..." type="number" id="steakField" name="formMoney">
+
 <br>
 <br>
 ****************************/
 for (let i = 0; i < userNumber.length; i++) {
   console.log("Item" + i + ": " + userNumber[i] + " - $" + price[i] + "")
-  MENU.innerHTML += userNumber[i] + " - $" + price[i] + "<br>";
+  MENU.innerHTML += "$" + price[i] + ":" + userNumber[i] +  "<input placeholder="Quantity..." type="number" id="steakField" name="formMoney"><br>";
 }
 
 /****************************
