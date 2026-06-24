@@ -16,8 +16,8 @@ let price = [5, 20, 1, 10];
 Main code:
 ****************************/
 for (let i = 0; i < userNumber.length; i++) {
-console.log("Item" + i + ": " + userNumber[i] + " - $" + price[i] +"")
-MENU.innerHTML += userNumber[i] + " - $" + price[i] + "<br>";
+  console.log("Item" + i + ": " + userNumber[i] + " - $" + price[i] + "")
+  MENU.innerHTML += userNumber[i] + " - $" + price[i] + "<br>";
 }
 
 /****************************
@@ -104,31 +104,31 @@ function getFormInput() {
   let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
 
   if (cost > money) {
-    OUTPUT.innerHTML += "Sorry, you can't afford this item/s.<br>";
-  } else
+    OUTPUT.innerHTML += "Sorry, you can't afford these items.<br>";
+  } else {
+    OUTPUT.innerHTML = "<h3>Name: " + name + "</h3>";
+    OUTPUT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
 
-  OUTPUT.innerHTML = "<h3>Name: " + name + "</h3>";
-  OUTPUT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
+    if (eggsAmount > 0) {
+      OUTPUT.innerHTML += "Eggs: " + eggsAmount + " = $" + eggsAmount * price[0] + "<br>";
+    }
+    if (steakAmount > 0) {
+      OUTPUT.innerHTML += "Steak: " + steakAmount + " = $" + steakAmount * price[1] + "<br>";
+    }
+    if (avocadoAmount > 0) {
+      OUTPUT.innerHTML += "Avocado: " + avocadoAmount + " = $" + avocadoAmount * price[2] + "<br>";
+    }
+    if (rawmilkAmount > 0) {
+      OUTPUT.innerHTML += "Raw milk: " + rawmilkAmount + " = $" + rawmilkAmount * price[3] + "<br>";
+    }
 
-  if (eggsAmount > 0) {
-    OUTPUT.innerHTML += "Eggs: " + eggsAmount + " = $" + eggsAmount * price[0] + "<br>";
+    OUTPUT.innerHTML += "<h4>Total: $" + cost + "</h4>";
+    OUTPUT.innerHTML += "<h4>Money provided: $" + money + "</h4>";
+    OUTPUT.innerHTML += "<h4>Change: $" + calculateChange(money, cost) + "</h4>";
+
+    OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
   }
-  if (steakAmount > 0) {
-    OUTPUT.innerHTML += "Steak: " + steakAmount + " = $" + steakAmount * price[1] + "<br>";
-  }
-  if (avocadoAmount > 0) {
-    OUTPUT.innerHTML += "Avocado: " + avocadoAmount + " = $" + avocadoAmount * price[2] + "<br>";
-  }
-  if (rawmilkAmount > 0) {
-    OUTPUT.innerHTML += "Raw milk: " + rawmilkAmount + " = $" + rawmilkAmount * price[3] + "<br>";
-  }
-
-  OUTPUT.innerHTML += "<h4>Total: $" + cost + "</h4>";
-  OUTPUT.innerHTML += "<h4>Money provided: $" + money + "</h4>";
-  OUTPUT.innerHTML += "<h4>Change: $" + calculateChange(money, cost) + "</h4>";
-
-  OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
-
-
 }
+
+
 
