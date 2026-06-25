@@ -61,7 +61,7 @@ function viewOrder() {
  // }
 
   for (let i = 0; i < userNumber.length; i++) {
-    console.log(userNumber[i])
+    console.log(userNumber[i] + ": "  + " <br>")
    //OUTPUT.innerHTML += userNumber[i] + ": " + amount[i] + " = $" + amount[i] * price[i] + " <br>";
   }
 
