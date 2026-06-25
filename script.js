@@ -21,6 +21,10 @@ for (let i = 0; i < userNumber.length; i++) {
   OUTPUT.innerHTML += "$" + price[i] + ": " + userNumber[i] + " " + '<input placeholder="Quantity..." type="number" id="'+userNumber[i]+'Field" name="formMoney"><br><br>';
 }
 
+for (let i = 0; i < userNumber.length; i++) {
+  console.log("$" + price[i] + ":" + userNumber[i] +  '<input placeholder="Quantity..." type="number" id="'+userNumber[i]+'Field" name="formMoney"><br><br>')
+  OUTPUT.innerHTML += "$" + price[i] + ": " + userNumber[i] + " " + '<input placeholder="Quantity..." type="number" id="'+userNumber[i]+'Field" name="formMoney"><br><br>';
+}
 /****************************
 Functions:
 ****************************/
