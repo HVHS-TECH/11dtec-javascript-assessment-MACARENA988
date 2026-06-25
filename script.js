@@ -1,10 +1,13 @@
 console.log("script.js")
 console.log("Hello world!")
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+const EGGS_FIELD = document.getElementById("eggsField");
+const STEAK_FIELD = document.getElementById("steakField");
+const AVOCADO_FIELD = document.getElementById("avocadoField");
+const RAWMILK_FIELD = document.getElementById("rawmilkField");
 
 //Arrays
 let userNumber = ["Eggs", "Steak", "Avocado", "Rawmilk"];
-
 
 let price = [5, 20, 1, 10, 77];
 
@@ -50,12 +53,8 @@ function calculateChange(_money, _price) {
 function viewOrder() {
 
   let amount = ["Number(EGGS_FIELD.value);", "Number(STEAK_FIELD.value);", " Number(AVOCADO_FIELD.value);", "Number(RAWMILK_FIELD.value);"];
-  
-  const EGGS_FIELD = document.getElementById("eggsField");
-  const STEAK_FIELD = document.getElementById("steakField");
-  const AVOCADO_FIELD = document.getElementById("avocadoField");
-  const RAWMILK_FIELD = document.getElementById("rawmilkField");
-
+  let userNumber = ["Eggs", "Steak", "Avocado", "Rawmilk"];
+  let price = [5, 20, 1, 10, 77];
   let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
 
   for (let i = 0; i < userNumber.length; i++) {
