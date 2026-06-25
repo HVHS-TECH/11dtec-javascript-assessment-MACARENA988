@@ -86,25 +86,24 @@ function viewOrder() {
 }
 
 function getFormInput() {
+
+  for (let i = 0; i < userNumber.length; i++) {
+  OUTPUT.innerHTML += userNumber[i] + ": " + price[i] + ": " +  + " " + '<input placeholder="Quantity..." type="number" id="'+userNumber[i]+'Field" name="formMoney"><br><br>';
+}
   const NAME_FIELD = document.getElementById("nameField");
   const MONEY_FIELD = document.getElementById("moneyField");
-
   const EGGS_FIELD = document.getElementById("eggsField");
   const STEAK_FIELD = document.getElementById("steakField");
   const AVOCADO_FIELD = document.getElementById("avocadoField");
   const RAWMILK_FIELD = document.getElementById("rawmilkField");
 
   let name = NAME_FIELD.value;
-
   let money = Number(MONEY_FIELD.value);
-
   let eggsAmount = Number(EGGS_FIELD.value);
   let steakAmount = Number(STEAK_FIELD.value);
   let avocadoAmount = Number(AVOCADO_FIELD.value);
   let rawmilkAmount = Number(RAWMILK_FIELD.value);
-
   let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
-
   if (cost > money) {
     OUTPUT.innerHTML += "Sorry, you can't afford these items.<br>";
   } else {
@@ -123,7 +122,6 @@ function getFormInput() {
     if (rawmilkAmount > 0) {
       OUTPUT.innerHTML += "Raw milk: " + rawmilkAmount + " = $" + rawmilkAmount * price[3] + "<br>";
     }
-
     OUTPUT.innerHTML += "<h4>Total: $" + cost + "</h4>";
     OUTPUT.innerHTML += "<h4>Money provided: $" + money + "</h4>";
     OUTPUT.innerHTML += "<h4>Change: $" + calculateChange(money, cost) + "</h4>";
