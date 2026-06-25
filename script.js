@@ -55,11 +55,11 @@ function viewOrder() {
   let amount = ["Number(EGGS_FIELD.value);", "Number(STEAK_FIELD.value);", " Number(AVOCADO_FIELD.value);", "Number(RAWMILK_FIELD.value);"];
   let userNumber = ["Eggs", "Steak", "Avocado", "Rawmilk"];
   let price = [5, 20, 1, 10, 77];
-  let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
+  let cost = amount[0] * price[0] + amount[1] * price[1] + amount[2] * price[2] + amount[3] * price[3];
 
-  for (let i = 0; i < userNumber.length; i++) {
-    OUTPUT.innerHTML += (amount[i] * price[i]) + " <br>";
-  }
+ // for (let i = 0; i < userNumber.length; i++) {
+ //   OUTPUT.innerHTML += (amount[i] * price[i]) + " <br>";
+ // }
 
   for (let i = 0; i < userNumber.length; i++) {
     OUTPUT.innerHTML += userNumber[i] + ": " + amount[i] + " = $" + amount[i] * price[i] + " <br>";
