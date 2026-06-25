@@ -55,19 +55,10 @@ function viewOrder() {
 
   let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
 
-  OUTPUT.innerHTML = "These are the items on your order:<br>";
-  if (eggsAmount > 0) {
-    OUTPUT.innerHTML += "Eggs: " + eggsAmount + " = $" + eggsAmount * price[0] + "<br>";
+  for (let i = 0; i < userNumber.length; i++) {
+    OUTPUT.innerHTML += userNumber[i] + ": " + amount[i] + " = $" + amount[i] * price[i] + " <br>";
   }
-  if (steakAmount > 0) {
-    OUTPUT.innerHTML += "Steak: " + steakAmount + " = $" + steakAmount * price[1] + "<br>";
-  }
-  if (avocadoAmount > 0) {
-    OUTPUT.innerHTML += "Avocado: " + avocadoAmount + " = $" + avocadoAmount * price[2] + "<br>";
-  }
-  if (rawmilkAmount > 0) {
-    OUTPUT.innerHTML += "Raw milk: " + rawmilkAmount + " = $" + rawmilkAmount * price[3] + "<br>";
-  }
+
   OUTPUT.innerHTML += "Total: $" + cost + "<br><br>";
 }
 
@@ -82,9 +73,7 @@ function getFormInput() {
   let name = NAME_FIELD.value;
   let money = Number(MONEY_FIELD.value);
 
-  for (let i = 0; i < userNumber.length; i++) {
-    OUTPUT.innerHTML += userNumber[i] + ": " + amount[i] + " = $" + amount[i] * price[i] + " <br>";
-  }
+
 
   let eggsAmount = Number(EGGS_FIELD.value);
   let steakAmount = Number(STEAK_FIELD.value);
