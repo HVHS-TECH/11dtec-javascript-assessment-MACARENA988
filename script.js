@@ -9,7 +9,9 @@ Steak = 20
 Avocado = 1
 Raw milk = 10
 ****************************/
-let userNumber = ["Eggs", "Steak", "Avocado", "Rawmilk","lrge fries"];
+let userNumber = ["Eggs", "Steak", "Avocado", "Rawmilk","largefries"];
+
+let amount = ["eggsAmount", "steakAmount", "avocadoAmount", "rawmilkAmount","lrge friesAmount"];
 
 let price = [5, 20, 1, 10, 77];
 /****************************
