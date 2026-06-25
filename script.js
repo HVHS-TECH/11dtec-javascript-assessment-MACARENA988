@@ -5,7 +5,7 @@ const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 //Arrays
 let userNumber = ["Eggs", "Steak", "Avocado", "Rawmilk"];
 
-let amount = ["Number(EGGS_FIELD.value);", "Number(STEAK_FIELD.value);", " Number(AVOCADO_FIELD.value);", "Number(RAWMILK_FIELD.value);"];
+
 let price = [5, 20, 1, 10, 77];
 
 /****************************
@@ -48,6 +48,9 @@ function calculateChange(_money, _price) {
 }
 
 function viewOrder() {
+
+  let amount = ["Number(EGGS_FIELD.value);", "Number(STEAK_FIELD.value);", " Number(AVOCADO_FIELD.value);", "Number(RAWMILK_FIELD.value);"];
+  
   const EGGS_FIELD = document.getElementById("eggsField");
   const STEAK_FIELD = document.getElementById("steakField");
   const AVOCADO_FIELD = document.getElementById("avocadoField");
