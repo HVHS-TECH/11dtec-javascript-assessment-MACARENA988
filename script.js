@@ -9,9 +9,9 @@ Steak = 20
 Avocado = 1
 Raw milk = 10
 ****************************/
-let userNumber = ["Eggs", "Steak", "Avocado", "Rawmilk","largefries"];
+let userNumber = ["Eggs", "Steak", "Avocado", "Rawmilk"];
 
-let amount = ["eggsAmount", "steakAmount", "avocadoAmount", "rawmilkAmount","lrge friesAmount"];
+let amount = ["Number(EGGS_FIELD.value);", "Number(STEAK_FIELD.value);", " Number(AVOCADO_FIELD.value);", "Number(RAWMILK_FIELD.value);"];
 
 let price = [5, 20, 1, 10, 77];
 /****************************
@@ -58,16 +58,10 @@ function getFormInput() {
 
 
 function viewOrder() {
-
   const EGGS_FIELD = document.getElementById("eggsField");
   const STEAK_FIELD = document.getElementById("steakField");
   const AVOCADO_FIELD = document.getElementById("avocadoField");
   const RAWMILK_FIELD = document.getElementById("rawmilkField");
-
-  let eggsAmount = Number(EGGS_FIELD.value);
-  let steakAmount = Number(STEAK_FIELD.value);
-  let avocadoAmount = Number(AVOCADO_FIELD.value);
-  let rawmilkAmount = Number(RAWMILK_FIELD.value);
 
   let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
 
@@ -90,7 +84,7 @@ function viewOrder() {
 function getFormInput() {
 
   for (let i = 0; i < userNumber.length; i++) {
-  OUTPUT.innerHTML += userNumber[i] + ": " + price[i] + ": " +  + " " + '<input placeholder="Quantity..." type="number" id="'+userNumber[i]+'Field" name="formMoney"><br><br>';
+  OUTPUT.innerHTML += userNumber[i] + ": " + amount[i] + " = $" + amount[i] * price[i] + " <br>";
 }
   const NAME_FIELD = document.getElementById("nameField");
   const MONEY_FIELD = document.getElementById("moneyField");
