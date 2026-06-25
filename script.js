@@ -1,38 +1,26 @@
 console.log("script.js")
 console.log("Hello world!")
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-//const MENU = document.getElementById("spaceForMenu");
-//Varibles
-/****************************
-Eggs = 5
-Steak = 20
-Avocado = 1
-Raw milk = 10
-****************************/
+
+//Arrays
 let userNumber = ["Eggs", "Steak", "Avocado", "Rawmilk"];
 
 let amount = ["Number(EGGS_FIELD.value);", "Number(STEAK_FIELD.value);", " Number(AVOCADO_FIELD.value);", "Number(RAWMILK_FIELD.value);"];
-
 let price = [5, 20, 1, 10, 77];
+
 /****************************
 Main code:
 
 ****************************/
 for (let i = 0; i < userNumber.length; i++) {
-  console.log("$" + price[i] + ":" + userNumber[i] +  '<input placeholder="Quantity..." type="number" id="'+userNumber[i]+'Field" name="formMoney"><br><br>')
-  OUTPUT.innerHTML += "$" + price[i] + ": " + userNumber[i] + " " + '<input placeholder="Quantity..." type="number" id="'+userNumber[i]+'Field" name="formMoney"><br><br>';
+  console.log("$" + price[i] + ":" + userNumber[i] + '<input placeholder="Quantity..." type="number" id="' + userNumber[i] + 'Field" name="formMoney"><br><br>')
+  OUTPUT.innerHTML += "$" + price[i] + ": " + userNumber[i] + " " + '<input placeholder="Quantity..." type="number" id="' + userNumber[i] + 'Field" name="formMoney"><br><br>';
 }
 
 
 /****************************
 Functions:
 ****************************/
-function calculateChange(_money, _price) {
-  let change = _money - _price;
-  return change;
-}
-
-
 /****************************
 function getFormInput() {
   const NAME_FIELD = document.getElementById("nameField");
@@ -54,8 +42,10 @@ function getFormInput() {
 
 }
 ****************************/
-
-
+function calculateChange(_money, _price) {
+  let change = _money - _price;
+  return change;
+}
 
 function viewOrder() {
   const EGGS_FIELD = document.getElementById("eggsField");
@@ -82,10 +72,6 @@ function viewOrder() {
 }
 
 function getFormInput() {
-
-  for (let i = 0; i < userNumber.length; i++) {
-  OUTPUT.innerHTML += userNumber[i] + ": " + amount[i] + " = $" + amount[i] * price[i] + " <br>";
-}
   const NAME_FIELD = document.getElementById("nameField");
   const MONEY_FIELD = document.getElementById("moneyField");
   const EGGS_FIELD = document.getElementById("eggsField");
@@ -95,11 +81,17 @@ function getFormInput() {
 
   let name = NAME_FIELD.value;
   let money = Number(MONEY_FIELD.value);
+
+  for (let i = 0; i < userNumber.length; i++) {
+    OUTPUT.innerHTML += userNumber[i] + ": " + amount[i] + " = $" + amount[i] * price[i] + " <br>";
+  }
+
   let eggsAmount = Number(EGGS_FIELD.value);
   let steakAmount = Number(STEAK_FIELD.value);
   let avocadoAmount = Number(AVOCADO_FIELD.value);
   let rawmilkAmount = Number(RAWMILK_FIELD.value);
   let cost = eggsAmount * price[0] + steakAmount * price[1] + avocadoAmount * price[2] + rawmilkAmount * price[3];
+
   if (cost > money) {
     OUTPUT.innerHTML += "Sorry, you can't afford these items.<br>";
   } else {
