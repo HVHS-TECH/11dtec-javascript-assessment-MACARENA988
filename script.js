@@ -62,7 +62,9 @@ function viewOrder() {
 
   for (let i = 0; i < userNumber.length; i++) {
     console.log()
-    const EGGS_FIELD = document.getElementById("userNumber[i] + "Field"")
+    const EGGS_FIELD = document.getElementById(userNumber[i] + "Field")
+      let eggsAmount = Number(EGGS_FIELD.value);
+      console.log(eggsAmount)
    //OUTPUT.innerHTML += userNumber[i] + ": " + amount[i] + " = $" + amount[i] * price[i] + " <br>";
   }
 
