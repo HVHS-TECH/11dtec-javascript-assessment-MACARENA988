@@ -11,7 +11,7 @@ Raw milk = 10
 ****************************/
 let userNumber = ["Eggs", "Steak", "Avocado", "Rawmilk"];
 
-let price = [5.00, 20.00, 1.00, 10.00];
+let price = [5, 20, 1, 10];
 /****************************
 Main code:
 
