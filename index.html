@@ -29,21 +29,19 @@
   <h2>Food:</h2>
 
   <div id="spaceForJavaScriptOutput">
-
-
   </div>
 
-  <div id="cart"> onclick="toggleCart()">
 
+  <div id="cart" onclick="toggleCart()">
     <img src="cart.png">
     <span id="cartBadge">0</span>
-
   </div>
 
+
   <div id="cartDropdown">
-
-<div id="cartContents"></div>
-
+    <div id="cartContents"></div>
+    <hr>
+    <b>Total: $<span id="cartTotal">0</span></b>
   </div>
 
   <button type="button" onclick="viewOrder()">View items on order:</button>
