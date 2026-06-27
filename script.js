@@ -88,7 +88,7 @@ let cartHTML = "";
         let cost = quantity * prices[i]
         total += cost;
         itemCount += quantity;
-        CartHTML += items[i] + " x" + quantity + " = $" + cost + "<br>";
+        cartHTML += items[i] + " x" + quantity + " = $" + cost + "<br>";
       }
     }
 
