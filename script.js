@@ -3,7 +3,7 @@ console.log("Hello world!")
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
 //Arrays
-let userNumber = ["Eggs", "Steak", "Avocado", "Rawmilk"];
+let items = ["Eggs", "Steak", "Avocado", "Rawmilk"];
 
 let price = [5, 20, 1, 10, 77];
 
@@ -11,8 +11,8 @@ let price = [5, 20, 1, 10, 77];
 Main code:
 
 ****************************/
-for (let i = 0; i < userNumber.length; i++) {
-  OUTPUT.innerHTML += "$" + price[i] + ": " + userNumber[i] + " " + '<input placeholder="Quantity..." type="number" id="' + userNumber[i] + 'Field" name="formMoney"><br><br>';
+for (let i = 0; i < items.length; i++) {
+  OUTPUT.innerHTML += "$" + price[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" id="' + items[i] + 'Field" name="formMoney"><br><br>';
 }
 
 
@@ -34,8 +34,8 @@ function viewOrder() {
  //   OUTPUT.innerHTML += (amount[i] * price[i]) + " <br>";
  // }
 
-  for (let i = 0; i < userNumber.length; i++) {
-    const MENU_FIELD = document.getElementById(userNumber[i] + "Field")
+  for (let i = 0; i < items.length; i++) {
+    const MENU_FIELD = document.getElementById(items[i] + "Field")
       let quantity = Number(MENU_FIELD.value);
       let total = quantity * price[i]
       OUTPUT.innerHTML += userNumber
