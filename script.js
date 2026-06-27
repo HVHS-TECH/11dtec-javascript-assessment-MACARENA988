@@ -76,6 +76,7 @@ function getFormInput() {
     OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
   }
 }
+
 function updateCart(){
 let total = 0;
 let itemCount = 0;
