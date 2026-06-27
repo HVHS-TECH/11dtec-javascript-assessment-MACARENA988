@@ -64,8 +64,6 @@ function getFormInput() {
     OUTPUT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
 
     for (let i = 0; i < items.length; i++) {
-      const menuField = document.getElementById(items[i] + "Field")
-      quantities[i] = Number(menuField.value);
       let total = quantities[i] * prices[i]
       OUTPUT.innerHTML += items[i] + " total: $" + total + "<br>";
     }
