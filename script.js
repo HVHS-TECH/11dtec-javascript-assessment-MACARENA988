@@ -30,8 +30,8 @@ function viewOrder() {
     const MENU_FIELD = document.getElementById(items[i] + "Field")
       let quantity = Number(MENU_FIELD.value);
       let total = quantity * prices[i]
-      OUTPUT.innerHTML += userNumber[i] + " total: $" + total;
-       console.log(userNumber[i] + " total: $" + total)
+      OUTPUT.innerHTML += items[i] + " total: $" + total;
+       console.log(items[i] + " total: $" + total)
   }
 
   OUTPUT.innerHTML += "Total: $" + cost + "<br><br>";
