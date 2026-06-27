@@ -81,7 +81,9 @@ function getFormInput() {
 function toggleCart(){
 const dropDown = document.getElementById("cartDropdown")
 updateCart();
-if (dropDown.style.display === "none")
+if (dropDown.style.display === "none"){
+  dropDown.style.display === "block";
+} else {
+dropDown.style.display === "none";
 }
-
-
+} 
