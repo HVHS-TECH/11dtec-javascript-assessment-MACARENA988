@@ -24,7 +24,10 @@ function calculateChange(_money, _price) {
   return change;
 }
 
+
 function viewOrder() {
+
+let cost = 0;
 
   for (let i = 0; i < items.length; i++) {
     const menuField = document.getElementById(items[i] + "Field")
