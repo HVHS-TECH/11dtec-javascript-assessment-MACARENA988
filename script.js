@@ -47,25 +47,20 @@ function getFormInput() {
   let name = NAME_FIELD.value;
   let money = Number(MONEY_FIELD.value);
 
-for (let i = 0; i < items.length; i++) {
-    const menuField = document.getElementById(items[i] + "Field")
-    let quantity = Number(menuField.value);
-    let total = quantity * prices[i]
-    cost += total
-    OUTPUT.innerHTML += items[i] + " total: $" + total + "<br>";
-
-    OUTPUT.innerHTML +=
-  }
-
   if (cost > money) {
     OUTPUT.innerHTML += "Sorry, you can't afford these items.<br>";
   } else {
+
     OUTPUT.innerHTML = "<h3>Name: " + name + "</h3>";
     OUTPUT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
 
-    
-
-
+    for (let i = 0; i < items.length; i++) {
+      const menuField = document.getElementById(items[i] + "Field")
+      let quantity = Number(menuField.value);
+      let total = quantity * prices[i]
+      cost += total
+      OUTPUT.innerHTML += items[i] + " total: $" + total + "<br>";
+    }
     OUTPUT.innerHTML += "<h4>Total: $" + cost + "</h4>";
     OUTPUT.innerHTML += "<h4>Money provided: $" + money + "</h4>";
     OUTPUT.innerHTML += "<h4>Change: $" + calculateChange(money, cost) + "</h4>";
