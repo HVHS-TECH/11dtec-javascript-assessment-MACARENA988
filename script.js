@@ -7,6 +7,7 @@ let items = ["Eggs", "Steak", "Avocado", "Rawmilk"];
 
 let prices = [5, 20, 1, 10];
 
+let quantities = []
 /****************************
 Main code:
 
@@ -62,7 +63,6 @@ function getFormInput() {
     OUTPUT.innerHTML = "<h3>Name: " + name + "</h3>";
     OUTPUT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
 
-    let quantities = []
     for (let i = 0; i < items.length; i++) {
       const menuField = document.getElementById(items[i] + "Field")
       quantities[i] = Number(menuField.value);
