@@ -32,10 +32,8 @@ function viewOrder() {
       let total = quantity * prices[i]
       cost += total
       OUTPUT.innerHTML += items[i] + " total: $" + total + "<br>";
-       console.log(items[i] + " total: $" + total + "<br>")
+      OUTPUT.innerHTML += "Total: $" + cost + "<br><br>";
   }
-
-  OUTPUT.innerHTML += "Total: $" + cost + "<br><br>";
 }
 
 function getFormInput() {
