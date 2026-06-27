@@ -3,4 +3,13 @@
     right: 20px;
     position: fixed;
     font-size: 24px;
+    cursor: pointer;
+}
+
+#cartDropdown {
+    top:20px;
+    right: 20px;
+    position: fixed;
+    font-size: 24px;
+    cursor: pointer;
 }
