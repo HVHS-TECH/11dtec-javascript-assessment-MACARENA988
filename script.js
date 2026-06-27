@@ -31,7 +31,7 @@ function viewOrder() {
       let quantity = Number(MENU_FIELD.value);
       let total = quantity * prices[i]
       OUTPUT.innerHTML += items[i] + " total: $" + total;
-       console.log(items[i] + " total: $" + total)
+       console.log(items[i] + " total: $" + total + "<br>")
   }
 
   OUTPUT.innerHTML += "Total: $" + cost + "<br><br>";
