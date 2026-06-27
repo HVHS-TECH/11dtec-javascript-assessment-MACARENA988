@@ -5,14 +5,14 @@ const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 //Arrays
 let items = ["Eggs", "Steak", "Avocado", "Rawmilk"];
 
-let price = [5, 20, 1, 10, 77];
+let prices = [5, 20, 1, 10, 77];
 
 /****************************
 Main code:
 
 ****************************/
 for (let i = 0; i < items.length; i++) {
-  OUTPUT.innerHTML += "$" + price[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" id="' + items[i] + 'Field" name="formMoney"><br><br>';
+  OUTPUT.innerHTML += "$" + prices[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" id="' + items[i] + 'Field" name="formMoney"><br><br>';
 }
 
 
@@ -26,20 +26,11 @@ function calculateChange(_money, _price) {
 
 function viewOrder() {
 
- // let amount = ["Number(EGGS_FIELD.value);", "Number(STEAK_FIELD.value);", " Number(AVOCADO_FIELD.value);", "Number(RAWMILK_FIELD.value);"];
-
- // let cost = amount[0] * price[0] + amount[1] * price[1] + amount[2] * price[2] + amount[3] * price[3];
-
- // for (let i = 0; i < userNumber.length; i++) {
- //   OUTPUT.innerHTML += (amount[i] * price[i]) + " <br>";
- // }
-
   for (let i = 0; i < items.length; i++) {
     const MENU_FIELD = document.getElementById(items[i] + "Field")
       let quantity = Number(MENU_FIELD.value);
-      let total = quantity * price[i]
-      OUTPUT.innerHTML += userNumber
-   //OUTPUT.innerHTML += userNumber[i] + ": " + amount[i] + " = $" + amount[i] * price[i] + " <br>";
+      let total = quantity * prices[i]
+      OUTPUT.innerHTML += userNumber[i] + " total: $" + total;
   }
 
   OUTPUT.innerHTML += "Total: $" + cost + "<br><br>";
