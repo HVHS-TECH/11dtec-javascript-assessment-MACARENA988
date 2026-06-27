@@ -74,10 +74,11 @@ for (let i = 0; i < items.length; i++) {
     if (rawmilkAmount > 0) {
       OUTPUT.innerHTML += "Raw milk: " + rawmilkAmount + " = $" + rawmilkAmount * price[3] + "<br>";
     }
+
+    
     OUTPUT.innerHTML += "<h4>Total: $" + cost + "</h4>";
     OUTPUT.innerHTML += "<h4>Money provided: $" + money + "</h4>";
     OUTPUT.innerHTML += "<h4>Change: $" + calculateChange(money, cost) + "</h4>";
-
     OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
   }
 }
