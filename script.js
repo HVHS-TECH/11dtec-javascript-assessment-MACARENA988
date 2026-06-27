@@ -78,4 +78,8 @@ function getFormInput() {
 }
 
 
+function toggleCart(){
+
+}
+
 
