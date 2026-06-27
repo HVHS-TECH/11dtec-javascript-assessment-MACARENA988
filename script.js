@@ -92,9 +92,9 @@ let cartHTML = "";
       }
     }
 
-    document.getElementById("cartBadge"). innerHTML = itemCount;
-    document.getElementById("cartContents"). innerHTML = cartHTML || "Cart is empty";
-    document.getElementById("cartTotal"). innerHTML = total;
+    document.getElementById("cartBadge").innerHTML = itemCount;
+    document.getElementById("cartContents").innerHTML = cartHTML || "Cart is empty";
+    document.getElementById("cartTotal").innerHTML = total;
 }
 
 
@@ -102,9 +102,9 @@ let cartHTML = "";
 function toggleCart(){
 const dropDown = document.getElementById("cartDropdown")
 updateCart();
-if (dropDown.style.display === "none"){
-  dropDown.style.display === "block";
+if (dropDown.style.display = "none"){
+  dropDown.style.display = "block";
 } else {
-dropDown.style.display === "none";
+dropDown.style.display = "none";
 }
 } 
