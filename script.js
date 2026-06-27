@@ -56,7 +56,7 @@ function getFormInput() {
     }
 
   if (cost > money) {
-    OUTPUT.innerHTML += "Sorry, you can't afford these items.<br>";
+    OUTPUT.innerHTML = "Sorry, you can't afford these items.<br>";
   } else {
 
     OUTPUT.innerHTML = "<h3>Name: " + name + "</h3>";
@@ -68,7 +68,7 @@ function getFormInput() {
       let total = quantity * prices[i]
       OUTPUT.innerHTML += items[i] + " total: $" + total + "<br>";
     }
-    
+
     OUTPUT.innerHTML += "<h4>Total: $" + cost + "</h4>";
     OUTPUT.innerHTML += "<h4>Money provided: $" + money + "</h4>";
     OUTPUT.innerHTML += "<h4>Change: $" + calculateChange(money, cost) + "</h4>";
