@@ -11,7 +11,18 @@
 </head>
 
 <body>
+ <div id="cart" onclick="toggleCart()">
+    <img src="cart.png">
+    <span id="cartBadge">0</span>
+  </div>
 
+
+  <div id="cartDropdown">
+    <div id="cartContents"></div>
+    <hr>
+    <b>Total: $<span id="cartTotal">0</span></b>
+  </div>
+  
   <h1>Dietmaxxing</h1>
 
   <h1>Order form -</h1>
@@ -31,18 +42,6 @@
   <div id="spaceForJavaScriptOutput">
   </div>
 
-
-  <div id="cart" onclick="toggleCart()">
-    <img src="cart.png">
-    <span id="cartBadge">0</span>
-  </div>
-
-
-  <div id="cartDropdown">
-    <div id="cartContents"></div>
-    <hr>
-    <b>Total: $<span id="cartTotal">0</span></b>
-  </div>
 
   <button type="button" onclick="viewOrder()">View items on order:</button>
   <br>
