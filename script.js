@@ -5,7 +5,7 @@ const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 //Arrays
 let items = ["Eggs", "Steak", "Avocado", "Rawmilk"];
 
-let prices = [5, 20, 1, 10, 77];
+let prices = [5, 20, 1, 10];
 
 /****************************
 Main code:
