@@ -79,7 +79,9 @@ function getFormInput() {
 
 
 function toggleCart(){
-
+const dropDown = document.getElementById("cartDropdown")
+updateCart();
+if (dropDown.style.display === "none")
 }
 
 
