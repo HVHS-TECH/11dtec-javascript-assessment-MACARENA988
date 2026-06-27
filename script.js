@@ -76,6 +76,16 @@ function getFormInput() {
     OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
   }
 }
+function updateCart(){
+ for (let i = 0; i < items.length; i++) {
+      const menuField = document.getElementById(items[i] + "Field")
+      quantities[i] = Number(menuField.value);
+      let total = quantities[i] * prices[i]
+      cost += total
+    }
+
+}
+
 
 
 function toggleCart(){
