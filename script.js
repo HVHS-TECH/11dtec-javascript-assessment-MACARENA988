@@ -54,6 +54,7 @@ for (let i = 0; i < items.length; i++) {
     cost += total
     OUTPUT.innerHTML += items[i] + " total: $" + total + "<br>";
 
+    OUTPUT.innerHTML +=
   }
 
   if (cost > money) {
@@ -62,20 +63,9 @@ for (let i = 0; i < items.length; i++) {
     OUTPUT.innerHTML = "<h3>Name: " + name + "</h3>";
     OUTPUT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
 
-    if (eggsAmount > 0) {
-      OUTPUT.innerHTML += "Eggs: " + eggsAmount + " = $" + eggsAmount * price[0] + "<br>";
-    }
-    if (steakAmount > 0) {
-      OUTPUT.innerHTML += "Steak: " + steakAmount + " = $" + steakAmount * price[1] + "<br>";
-    }
-    if (avocadoAmount > 0) {
-      OUTPUT.innerHTML += "Avocado: " + avocadoAmount + " = $" + avocadoAmount * price[2] + "<br>";
-    }
-    if (rawmilkAmount > 0) {
-      OUTPUT.innerHTML += "Raw milk: " + rawmilkAmount + " = $" + rawmilkAmount * price[3] + "<br>";
-    }
-
     
+
+
     OUTPUT.innerHTML += "<h4>Total: $" + cost + "</h4>";
     OUTPUT.innerHTML += "<h4>Money provided: $" + money + "</h4>";
     OUTPUT.innerHTML += "<h4>Change: $" + calculateChange(money, cost) + "</h4>";
