@@ -1,10 +1,6 @@
 console.log("script.js")
 console.log("Hello world!")
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-const EGGS_FIELD = document.getElementById("eggsField");
-const STEAK_FIELD = document.getElementById("steakField");
-const AVOCADO_FIELD = document.getElementById("avocadoField");
-const RAWMILK_FIELD = document.getElementById("rawmilkField");
 
 //Arrays
 let userNumber = ["Eggs", "Steak", "Avocado", "Rawmilk"];
@@ -42,7 +38,7 @@ function viewOrder() {
     const MENU_FIELD = document.getElementById(userNumber[i] + "Field")
       let quantity = Number(MENU_FIELD.value);
       let total = quantity * price[i]
-      const MENU_FIELD = document.getElementById(userNumber[i] + "Field")
+      OUTPUT.innerHTML += userNumber
    //OUTPUT.innerHTML += userNumber[i] + ": " + amount[i] + " = $" + amount[i] * price[i] + " <br>";
   }
 
