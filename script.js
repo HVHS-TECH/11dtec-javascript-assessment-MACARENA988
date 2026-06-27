@@ -2,6 +2,8 @@ console.log("script.js")
 console.log("Hello world!")
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
+
+
 //Arrays
 let items = ["Eggs", "Steak", "Avocado", "Rawmilk"];
 
