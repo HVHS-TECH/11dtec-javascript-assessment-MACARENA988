@@ -46,6 +46,7 @@ function getFormInput() {
   const MONEY_FIELD = document.getElementById("moneyField");
   let name = NAME_FIELD.value;
   let money = Number(MONEY_FIELD.value);
+  let cost = 0;
 
   if (cost > money) {
     OUTPUT.innerHTML += "Sorry, you can't afford these items.<br>";
