@@ -27,16 +27,18 @@ function calculateChange(_money, _price) {
 
 function viewOrder() {
 
-let cost = 0;
+  let cost = 0;
 
   for (let i = 0; i < items.length; i++) {
     const menuField = document.getElementById(items[i] + "Field")
-      let quantity = Number(menuField.value);
-      let total = quantity * prices[i]
-      cost += total
-      OUTPUT.innerHTML += items[i] + " total: $" + total + "<br>";
-      OUTPUT.innerHTML += "Total: $" + cost + "<br><br>";
+    let quantity = Number(menuField.value);
+    let total = quantity * prices[i]
+    cost += total
+    OUTPUT.innerHTML += items[i] + " total: $" + total + "<br>";
+
   }
+
+  OUTPUT.innerHTML += "Total: $" + cost + "<br><br>";
 }
 
 function getFormInput() {
