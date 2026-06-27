@@ -27,8 +27,8 @@ function calculateChange(_money, _price) {
 function viewOrder() {
 
   for (let i = 0; i < items.length; i++) {
-    const MENU_FIELD = document.getElementById(items[i] + "Field")
-      let quantity = Number(MENU_FIELD.value);
+    const menuField = document.getElementById(items[i] + "Field")
+      let quantity = Number(menuField.value);
       let total = quantity * prices[i]
       let cost += quantity * prices[i]
       OUTPUT.innerHTML += items[i] + " total: $" + total + "<br>";
