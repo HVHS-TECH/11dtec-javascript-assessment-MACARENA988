@@ -48,6 +48,13 @@ function getFormInput() {
   let money = Number(MONEY_FIELD.value);
   let cost = 0;
 
+  for (let i = 0; i < items.length; i++) {
+      const menuField = document.getElementById(items[i] + "Field")
+      let quantity = Number(menuField.value);
+      let total = quantity * prices[i]
+      cost += total
+    }
+
   if (cost > money) {
     OUTPUT.innerHTML += "Sorry, you can't afford these items.<br>";
   } else {
