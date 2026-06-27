@@ -23,27 +23,6 @@ for (let i = 0; i < userNumber.length; i++) {
 /****************************
 Functions:
 ****************************/
-/****************************
-function getFormInput() {
-  const NAME_FIELD = document.getElementById("nameField");
-  const ORDER_FIELD = document.getElementById("orderField");
-  const MONEY_FIELD = document.getElementById("moneyField");
-  let name = NAME_FIELD.value;
-  let order = Number(ORDER_FIELD.value);
-  let cost = Number(ORDER_FIELD.value);
-  let money = Number(MONEY_FIELD.value);
-
-  OUTPUT.innerHTML = "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
-  OUTPUT.innerHTML += "You ordered " + userNumber[order - 1] + ".</p>";
-
-  if (money >= price[cost - 1]) {
-    OUTPUT.innerHTML += "You will get $" + calculateChange(money, price[cost - 1]) + " change.";
-  } else {
-    OUTPUT.innerHTML += "Sorry you can't afford " + userNumber[order - 1] + "</p>";
-  }
-
-}
-****************************/
 function calculateChange(_money, _price) {
   let change = _money - _price;
   return change;
@@ -60,10 +39,10 @@ function viewOrder() {
  // }
 
   for (let i = 0; i < userNumber.length; i++) {
-    console.log("document.getElementById("+userNumber[i] + "Field)")
-    const EGGS_FIELD = document.getElementById(userNumber[i] + "Field")
-      let eggsAmount = Number(EGGS_FIELD.value);
-      console.log(eggsAmount)
+    const MENU_FIELD = document.getElementById(userNumber[i] + "Field")
+      let quantity = Number(MENU_FIELD.value);
+      let total = quantity * price[i]
+      const MENU_FIELD = document.getElementById(userNumber[i] + "Field")
    //OUTPUT.innerHTML += userNumber[i] + ": " + amount[i] + " = $" + amount[i] * price[i] + " <br>";
   }
 
