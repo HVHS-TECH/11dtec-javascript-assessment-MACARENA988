@@ -77,13 +77,24 @@ function getFormInput() {
   }
 }
 function updateCart(){
+let total = 0;
+let itemCount = 0;
+let cartHTML = "";
+
  for (let i = 0; i < items.length; i++) {
       const menuField = document.getElementById(items[i] + "Field")
-      quantities[i] = Number(menuField.value);
-      let total = quantities[i] * prices[i]
-      cost += total
+     let quantity = Number(menuField.value);
+      if (quantity > 0){
+        let cost = quantity * prices[i]
+        total += cost;
+        itemCount += quantity;
+        CartHTML += items[i] + " x" + quantity + " = $" + cost + "<br>";
+      }
     }
 
+    document.getElementById("cartBadge"). innerHTML = itemCount;
+    document.getElementById("cartContents"). innerHTML = cartHTML || "Cart is empty";
+    document.getElementById("cartTotal"). innerHTML = total;
 }
 
 
