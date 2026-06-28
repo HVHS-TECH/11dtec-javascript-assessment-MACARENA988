@@ -5,9 +5,9 @@ const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
 
 //Arrays
-let items = ["Eggs", "Steak", "Avocado", "Rawmilk"];
+let items = ["Eggs", "Steak", "Avocado", "Rawmilk, Water"];
 
-let prices = [5, 20, 1, 10];
+let prices = [5, 20, 1, 10, 2];
 
 let quantities = []
 /****************************
