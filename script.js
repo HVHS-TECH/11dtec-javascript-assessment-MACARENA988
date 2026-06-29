@@ -42,13 +42,12 @@ function getFormInput() {
       cost += total
     }
 
-  if (cost > money) {
-    OUTPUT.innerHTML = "Sorry, you can't afford these items.<br>";
-  } else {
-
     OUTPUT.innerHTML = "<h3>Name: " + name + "</h3>";
     OUTPUT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
 
+  if (cost > money) {
+    OUTPUT.innerHTML = "Sorry, you can't afford these items.<br>";
+  } else {
     for (let i = 0; i < items.length; i++) {
       let total = quantities[i] * prices[i]
       OUTPUT.innerHTML += items[i] + " total: $" + total + "<br>";
