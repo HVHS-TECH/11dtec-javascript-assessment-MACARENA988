@@ -61,6 +61,42 @@ function getFormInput() {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function updateCart(){
 let total = 0;
 let itemCount = 0;
