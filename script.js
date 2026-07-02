@@ -40,7 +40,7 @@ function getFormInput() {
       const menuField = document.getElementById(items[i] + "Field")
       quantity = Number(menuField.value);
        if (quantity > 0){
-       let total = quantity * prices[i]
+       let total = quantities[i] * prices[i]
       cost += total
       }
     }
