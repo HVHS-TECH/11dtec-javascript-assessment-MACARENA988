@@ -50,7 +50,7 @@ function getFormInput() {
     OUTPUT.innerHTML = "Sorry, you can't afford these items.<br>";
   } else {
     for (let i = 0; i < items.length; i++) {
-      let total = quantity * prices[i]
+      let total = quantities[i] * prices[i]
       OUTPUT.innerHTML += quantity + " total: $" + total + "<br>";
     }
 
