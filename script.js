@@ -39,8 +39,10 @@ function getFormInput() {
   for (let i = 0; i < items.length; i++) {
       const menuField = document.getElementById(items[i] + "Field")
       quantity = Number(menuField.value);
-      let total = quantities[i] * prices[i]
+       if (quantity > 0){
+       let total = quantity * prices[i]
       cost += total
+      }
     }
 
     OUTPUT.innerHTML = "<h3>Name: " + name + "</h3>";
@@ -51,7 +53,7 @@ function getFormInput() {
   } else {
     for (let i = 0; i < items.length; i++) {
       let total = quantities[i] * prices[i]
-      OUTPUT.innerHTML += quantity + " total: $" + total + "<br>";
+      OUTPUT.innerHTML += quantities[i] + " total: $" + total + "<br>";
     }
 
     OUTPUT.innerHTML += "<h4>Total: $" + cost + "</h4>";
