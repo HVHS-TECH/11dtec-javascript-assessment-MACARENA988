@@ -29,6 +29,7 @@ function calculateChange(_money, _price) {
 
 
 function getFormInput() {
+
   const NAME_FIELD = document.getElementById("nameField");
   const MONEY_FIELD = document.getElementById("moneyField");
   let name = NAME_FIELD.value;
