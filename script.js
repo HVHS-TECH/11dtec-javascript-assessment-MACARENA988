@@ -53,7 +53,7 @@ function getFormInput() {
   } else {
     for (let i = 0; i < items.length; i++) {
       let total = quantities[i] * prices[i]
-      OUTPUT.innerHTML += quantities[i] + " total: $" + total + "<br>";
+      OUTPUT.innerHTML += items[i] + " total: $" + total + "<br>";
     }
 
     OUTPUT.innerHTML += "<h4>Total: $" + cost + "</h4>";
