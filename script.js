@@ -45,21 +45,23 @@ function getFormInput() {
       }
     }
 
-    OUTPUT.innerHTML = "<h3>Name: " + name + "</h3>";
-    OUTPUT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
+const RECEIPT = document.getElementById("receiptOutput");
+RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
+    RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
+    RECEIPT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
 
   if (cost > money) {
-    OUTPUT.innerHTML = "Sorry, you can't afford these items.<br>";
+    RECEIPT.innerHTML = "Sorry, you can't afford these items.<br>";
   } else {
     for (let i = 0; i < items.length; i++) {
       let total = quantities[i] * prices[i]
-      OUTPUT.innerHTML += items[i] + " total: $" + total + "<br>";
+      RECEIPT.innerHTML += items[i] + " total: $" + total + "<br>";
     }
 
-    OUTPUT.innerHTML += "<h4>Total: $" + cost + "</h4>";
-    OUTPUT.innerHTML += "<h4>Money provided: $" + money + "</h4>";
-    OUTPUT.innerHTML += "<h4>Change: $" + calculateChange(money, cost) + "</h4>";
-    OUTPUT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
+    RECEIPT.innerHTML += "<h4>Total: $" + cost + "</h4>";
+    RECEIPT.innerHTML += "<h4>Money provided: $" + money + "</h4>";
+    RECEIPT.innerHTML += "<h4>Change: $" + calculateChange(money, cost) + "</h4>";
+    RECEIPT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
   }
 }
 
