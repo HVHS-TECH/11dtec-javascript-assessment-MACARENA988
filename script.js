@@ -51,7 +51,7 @@ function getFormInput() {
   }
 
   if (cost === 0) {
-    RECEIPT.innerHTML = "<h3>Please order atleast one item.</h3>";
+    RECEIPT.innerHTML = "<h3>Please order at least one item.</h3>";
     return;
   }
 
@@ -72,7 +72,7 @@ function getFormInput() {
     RECEIPT.innerHTML += "<h4>Total: $" + cost + "</h4>";
     RECEIPT.innerHTML += "<h4>Money provided: $" + money + "</h4>";
     RECEIPT.innerHTML += "<h4>Change: $" + calculateChange(money, cost) + "</h4>";
-    RECEIPT.innerHTML += "<p>Come back anytime " + name + ", we apprieciate you for ordering at Dietmaxxing.";
+    RECEIPT.innerHTML += "<p>Come back anytime " + name + ". we appreciate you for ordering at Dietmaxxing.";
   }
 }
 
