@@ -38,17 +38,17 @@ function getFormInput() {
   let cost = 0;
 
   for (let i = 0; i < items.length; i++) {
-      const menuField = document.getElementById(items[i] + "Field")
-      quantities[i] = Number(menuField.value);
-       if (quantities[i] > 0){
-       let total = quantities[i] * prices[i]
+    const menuField = document.getElementById(items[i] + "Field")
+    quantities[i] = Number(menuField.value);
+    if (quantities[i] > 0) {
+      let total = quantities[i] * prices[i]
       cost += total
-      }
     }
+  }
 
-RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
-    RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
-    RECEIPT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
+  RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
+  RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
+  RECEIPT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
 
   if (cost > money) {
     RECEIPT.innerHTML = "Sorry, you can't afford these items.<br>";
@@ -65,49 +65,49 @@ RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
   }
 }
 
-function resetOrder(){
-document.getElementById("nameField").vaule = 0;
-document.getElementById("moneyField").value = 0;
+function resetOrder() {
+  document.getElementById("nameField").vaule = "";
+  document.getElementById("moneyField").value = "";
 
   for (let i = 0; i < items.length; i++) {
-      const menuField = document.getElementById(items[i] + "Field")
-      menuField.value = "";
+    const menuField = document.getElementById(items[i] + "Field")
+    menuField.value = "";
   }
   quantities = [];
 
- document.getElementById("receiptOutput").innerHTML = "";
-updateCart();
+  document.getElementById("receiptOutput").innerHTML = "";
+  updateCart();
 }
 
-function updateCart(){
-let total = 0;
-let itemCount = 0;
-let cartHTML = "";
+function updateCart() {
+  let total = 0;
+  let itemCount = 0;
+  let cartHTML = "";
 
- for (let i = 0; i < items.length; i++) {
-      const menuField = document.getElementById(items[i] + "Field")
-     let quantity = Number(menuField.value);
-      if (quantity > 0){
-        let cost = quantity * prices[i]
-        total += cost;
-        itemCount += quantity;
-        cartHTML += items[i] + " x" + quantity + " = $" + cost + "<br>";
-      }
+  for (let i = 0; i < items.length; i++) {
+    const menuField = document.getElementById(items[i] + "Field")
+    let quantity = Number(menuField.value);
+    if (quantity > 0) {
+      let cost = quantity * prices[i]
+      total += cost;
+      itemCount += quantity;
+      cartHTML += items[i] + " x" + quantity + " = $" + cost + "<br>";
     }
+  }
 
-    document.getElementById("cartBadge").innerHTML = itemCount;
-    document.getElementById("cartContents").innerHTML = cartHTML || "Cart is empty";
-    document.getElementById("cartTotal").innerHTML = total;
+  document.getElementById("cartBadge").innerHTML = itemCount;
+  document.getElementById("cartContents").innerHTML = cartHTML || "Cart is empty";
+  document.getElementById("cartTotal").innerHTML = total;
 }
 
 
 
-function toggleCart(){
-const dropDown = document.getElementById("cartDropdown")
-updateCart();
-if (dropDown.style.display === "none"){
-  dropDown.style.display = "block";
-} else {
-dropDown.style.display = "none";
-}
+function toggleCart() {
+  const dropDown = document.getElementById("cartDropdown")
+  updateCart();
+  if (dropDown.style.display === "none") {
+    dropDown.style.display = "block";
+  } else {
+    dropDown.style.display = "none";
+  }
 } 
