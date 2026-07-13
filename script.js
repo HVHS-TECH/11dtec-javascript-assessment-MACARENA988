@@ -35,10 +35,10 @@ function getFormInput() {
   const MONEY_FIELD = document.getElementById("moneyField");
   let name = NAME_FIELD.value;
 
-  ///if (/\d/.test(name)) {
-///RECEIPT.innerHTML = "<h3>Please use a valid name.</h3>";
-//return;
-//}
+  if (/\d/.test(name)) {
+    RECEIPT.innerHTML = "<h3>Please use a valid name.</h3>";
+    return;
+  }
 
   let money = Number(MONEY_FIELD.value);
   let cost = 0;
@@ -46,14 +46,14 @@ function getFormInput() {
   for (let i = 0; i < items.length; i++) {
     const menuField = document.getElementById(items[i] + "Field")
     quantities[i] = Number(menuField.value);
-      let total = quantities[i] * prices[i]
-      cost += total
-    }
+    let total = quantities[i] * prices[i]
+    cost += total
+  }
 
-    if (cost === 0) {
-      RECEIPT.innerHTML = "<h3>Please order atleast one item.</h3>";
-      return;
-    }
+  if (cost === 0) {
+    RECEIPT.innerHTML = "<h3>Please order atleast one item.</h3>";
+    return;
+  }
 
   RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
   RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
@@ -65,7 +65,7 @@ function getFormInput() {
     for (let i = 0; i < items.length; i++) {
       if (quantities[i] > 0) {
         let total = quantities[i] * prices[i]
-        RECEIPT.innerHTML += items[i] + " total: $" + total + "<br>";
+        RECEIPT.innerHTML += quantities[i] + "x " + items[i] + " total: $" + total + "<br>";
       }
     }
 
