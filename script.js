@@ -34,6 +34,12 @@ function getFormInput() {
   const NAME_FIELD = document.getElementById("nameField");
   const MONEY_FIELD = document.getElementById("moneyField");
   let name = NAME_FIELD.value;
+
+  if (/\d/.test(name)) {
+RECEIPT.innerHTML = "<h3>Please use a valid name.</h3>";
+return;
+}
+
   let money = Number(MONEY_FIELD.value);
   let cost = 0;
 
