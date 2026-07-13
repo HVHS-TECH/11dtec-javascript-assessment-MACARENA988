@@ -6,7 +6,7 @@ const RECEIPT = document.getElementById("receiptOutput");
 
 
 //Arrays
-let items = ["Egg", "Steak", "Avocado", "Rawmilk", "Water", "Nuts"];
+let items = ["Egg(Half)", "Steak(500g)", "Avocado", "Rawmilk", "Water", "Nuts"];
 
 let prices = [5, 20, 1, 10, 2, 5];
 
