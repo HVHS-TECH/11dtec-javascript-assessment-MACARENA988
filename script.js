@@ -40,11 +40,9 @@ function getFormInput() {
   for (let i = 0; i < items.length; i++) {
     const menuField = document.getElementById(items[i] + "Field")
     quantities[i] = Number(menuField.value);
-    if (quantities[i] > 0) {
       let total = quantities[i] * prices[i]
       cost += total
     }
-  }
 
   RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
   RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
@@ -54,8 +52,10 @@ function getFormInput() {
     RECEIPT.innerHTML = "Sorry, you can't afford these items.<br>";
   } else {
     for (let i = 0; i < items.length; i++) {
-      let total = quantities[i] * prices[i]
-      RECEIPT.innerHTML += items[i] + " total: $" + total + "<br>";
+      if (quantities[i] > 0) {
+        let total = quantities[i] * prices[i]
+        RECEIPT.innerHTML += items[i] + " total: $" + total + "<br>";
+      }
     }
 
     RECEIPT.innerHTML += "<h4>Total: $" + cost + "</h4>";
