@@ -66,24 +66,17 @@ RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
 }
 
 function resetOrder(){
-let total = 0;
-let itemCount = 0;
-let cartHTML = "";
+document.getElementById("nameField").vaule = 0;
+document.getElementById("moneyField").value = 0;
 
- for (let i = 0; i < items.length; i++) {
+  for (let i = 0; i < items.length; i++) {
       const menuField = document.getElementById(items[i] + "Field")
-     let quantity = Number(menuField.value);
-      if (quantity > 0){
-        let cost = quantity * prices[i]
-        total += cost;
-        itemCount += quantity;
-        cartHTML += items[i] + " x" + quantity + " = $" + cost + "<br>";
-      }
-    }
+      menuField.value = "";
+  }
+  quantities = [];
 
-    document.getElementById("cartBadge").innerHTML = itemCount;
-    document.getElementById("cartContents").innerHTML = cartHTML || "Cart is empty";
-    document.getElementById("cartTotal").innerHTML = total;
+ document.getElementById("receiptOutput").innerHTML = "";
+updateCart();
 }
 
 function updateCart(){
