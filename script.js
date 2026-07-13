@@ -72,7 +72,7 @@ function getFormInput() {
     RECEIPT.innerHTML += "<h4>Total: $" + cost + "</h4>";
     RECEIPT.innerHTML += "<h4>Money provided: $" + money + "</h4>";
     RECEIPT.innerHTML += "<h4>Change: $" + calculateChange(money, cost) + "</h4>";
-    RECEIPT.innerHTML += "<p>Come back anytime " + name + ". we appreciate you for ordering at Dietmaxxing.";
+    RECEIPT.innerHTML += "<p>Come back anytime " + name + ". We appreciate you for ordering at Dietmaxxing.";
   }
 }
 
