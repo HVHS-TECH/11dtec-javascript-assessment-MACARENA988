@@ -1,6 +1,7 @@
 console.log("script.js")
 console.log("Hello world!")
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+const RECEIPT = document.getElementById("receiptOutput");
 
 
 
@@ -45,7 +46,6 @@ function getFormInput() {
       }
     }
 
-const RECEIPT = document.getElementById("receiptOutput");
 RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
     RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
     RECEIPT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
