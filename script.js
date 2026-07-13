@@ -65,6 +65,27 @@ RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
   }
 }
 
+function resetOrder(){
+let total = 0;
+let itemCount = 0;
+let cartHTML = "";
+
+ for (let i = 0; i < items.length; i++) {
+      const menuField = document.getElementById(items[i] + "Field")
+     let quantity = Number(menuField.value);
+      if (quantity > 0){
+        let cost = quantity * prices[i]
+        total += cost;
+        itemCount += quantity;
+        cartHTML += items[i] + " x" + quantity + " = $" + cost + "<br>";
+      }
+    }
+
+    document.getElementById("cartBadge").innerHTML = itemCount;
+    document.getElementById("cartContents").innerHTML = cartHTML || "Cart is empty";
+    document.getElementById("cartTotal").innerHTML = total;
+}
+
 function updateCart(){
 let total = 0;
 let itemCount = 0;
