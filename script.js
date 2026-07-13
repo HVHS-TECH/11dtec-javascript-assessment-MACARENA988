@@ -44,12 +44,17 @@ function getFormInput() {
       cost += total
     }
 
+    if (cost === 0) {
+      RECEIPT.innerHTML = "<h3>Please order atleast one item.</h3>";
+      return;
+    }
+
   RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
   RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
   RECEIPT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
 
   if (cost > money) {
-    RECEIPT.innerHTML = "Sorry, you can't afford these items.<br>";
+    RECEIPT.innerHTML = "<h3>Sorry, you can't afford these items.</h3><br>";
   } else {
     for (let i = 0; i < items.length; i++) {
       if (quantities[i] > 0) {
