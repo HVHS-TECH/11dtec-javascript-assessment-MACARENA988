@@ -16,7 +16,7 @@ Main code:
 
 ****************************/
 for (let i = 0; i < items.length; i++) {
-  OUTPUT.innerHTML += "$" + prices[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" id="' + items[i] + 'Field" name="formMoney" oninput="updateCart()"><br><br>';
+  OUTPUT.innerHTML += "$" + prices[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" id="' + items[i] + 'Field" name="formMoney"  oninput="updateCart()"><br><br>';
 }
 
 
