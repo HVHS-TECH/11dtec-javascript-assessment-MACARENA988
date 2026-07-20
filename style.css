@@ -1,5 +1,5 @@
 #cart {
-    top:20px;
+    top: 20px;
     right: 20px;
     position: fixed;
     font-size: 24px;
@@ -7,19 +7,20 @@
 }
 
 #cartDropdown {
-    top:60px;
+    top: 60px;
     right: 20px;
     display: none;
     position: fixed;
     font-size: 24px;
     border: solid 1px black;
     background: white;
-    z-index:100;
+    z-index: 100;
     padding: 10px;
     min-width: 200px;
 }
 
 #middle {
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
