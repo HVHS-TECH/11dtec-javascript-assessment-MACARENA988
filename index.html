@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
   <title>Dietmaxxing</title>
   <meta charset="UTF-8">
@@ -8,8 +10,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body></body>
 
+<body>
+<header id="hero">
+    <h1>🥩 Dietmaxxing</h1>
+    <p>Fuel your body with nutrient-dense whole foods.</p>
+</header>
 
   <div id="cart" onclick="toggleCart()">
     <img src="cart.png" width="80px" height="80px">
@@ -23,7 +29,9 @@
     <b>Total: $<span id="cartTotal">0</span></b>
   </div>
 
-  <div id="middle">
+  <div id="container">
+
+    <div id="middle">
   <h1>Dietmaxxing</h1>
   </div>
 
@@ -44,8 +52,7 @@
   <div id="spaceForJavaScriptOutput">
   </div>
 
-  <div id="receiptOutput">
-  </div>
+  <div id="receiptOutput"></div>
 
   <br>
   <input type="submit" onclick="getFormInput()">
@@ -55,7 +62,11 @@
   <br>
 
   <script src="script.js"></script>
-
+</div>
+  
+<footer>
+    <p>© 2026 Dietmaxxing • Eat clean • Run Fast • Live longer</p>
+</footer>
 </body>
 
 </html>
