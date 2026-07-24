@@ -4,7 +4,6 @@ const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 const RECEIPT = document.getElementById("receiptOutput");
 
 
-
 //Arrays
 let items = ["Eggs(Dozen)", "Steak(500g)", "Avocado", "Rawmilk(1L)", "Water(600ml)", "Nuts"];
 
@@ -16,8 +15,8 @@ Main code:
 
 ****************************/
 for (let i = 0; i < items.length; i++) {
-  OUTPUT.innerHTML += "$" + prices[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" id="' + items[i] + 'Field" name="formMoney"   oninput="updateCart()"> <img src="' + items[i] + '.jpg"> <br><br>';
-  console.log ("$" + prices[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" id="' + items[i] + 'Field" name="formMoney"   oninput="updateCart()" <img src="' + items[i] + '.jpg"  alt=> <br><br>')
+  OUTPUT.innerHTML += "$" + prices[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" min="0" id="' + items[i] + 'Field" name="formMoney"   oninput="updateCart()"> <img src="' + items[i] + '.jpg"> <br><br>';
+  console.log("$" + prices[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" id="' + items[i] + 'Field" name="formMoney"   oninput="updateCart()" <img src="' + items[i] + '.jpg"  alt=> <br><br>')
 }
 
 
@@ -31,12 +30,16 @@ function calculateChange(_money, _price) {
 
 
 function getFormInput() {
-
   const NAME_FIELD = document.getElementById("nameField");
   const MONEY_FIELD = document.getElementById("moneyField");
   let name = NAME_FIELD.value;
 
   if (/\d/.test(name)) {
+    RECEIPT.innerHTML = "<h3>Please use a valid name.</h3>";
+    return;
+  }
+
+  if (name === "") {
     RECEIPT.innerHTML = "<h3>Please use a valid name.</h3>";
     return;
   }
@@ -48,13 +51,22 @@ function getFormInput() {
     const menuField = document.getElementById(items[i] + "Field")
     quantities[i] = Number(menuField.value);
     let total = quantities[i] * prices[i]
+
+    if (total < 0) {
+      RECEIPT.innerHTML = "<h3>Do not use a negative quantity</h3>";
+      return;
+    }
+
     cost += total
   }
+
+
 
   if (cost === 0) {
     RECEIPT.innerHTML = "<h3>Please order at least one item.</h3>";
     return;
   }
+
 
   RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
   RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
