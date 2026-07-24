@@ -16,7 +16,7 @@ Main code:
 ****************************/
 for (let i = 0; i < items.length; i++) {
   OUTPUT.innerHTML += "$" + prices[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" min="0" id="' + items[i] + 'Field" name="formMoney"   oninput="updateCart()"> <img src="' + items[i] + '.jpg"> <br><br>';
-  console.log("$" + prices[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" id="' + items[i] + 'Field" name="formMoney"   oninput="updateCart()" <img src="' + items[i] + '.jpg"  > <br><br>')
+  console.log("$" + prices[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" id="' + items[i] + 'Field" name="formMoney"   oninput="updateCart()" <img src="' + items[i] + '.jpg"> <br><br>')
 }
 
 
@@ -69,7 +69,6 @@ function getFormInput() {
 
 
   RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
-  RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
   RECEIPT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
 
   if (cost > money) {
@@ -90,7 +89,7 @@ function getFormInput() {
 }
 
 function resetOrder() {
-  document.getElementById("nameField").vaule = "";
+  document.getElementById("nameField").value = "";
   document.getElementById("moneyField").value = "";
 
   for (let i = 0; i < items.length; i++) {
