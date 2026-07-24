@@ -5,15 +5,20 @@ const RECEIPT = document.getElementById("receiptOutput");
 
 
 //Arrays
+//the menu
 let items = ["Eggs(Dozen)", "Steak(500g)", "Avocado", "Rawmilk(1L)", "Water(600ml)", "Nuts"];
 
+//the prices of the foods and drinks
 let prices = [5, 20, 1, 10, 2, 5];
 
+//makes it so the code can read the quantities
 let quantities = []
 /****************************
 Main code:
 
 ****************************/
+
+//puts the menu on the page
 for (let i = 0; i < items.length; i++) {
   OUTPUT.innerHTML += "$" + prices[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" min="0" id="' + items[i] + 'Field" name="formMoney"   oninput="updateCart()"> <img src="' + items[i] + '.jpg"> <br><br>';
   console.log("$" + prices[i] + ": " + items[i] + " " + '<input placeholder="Quantity..." type="number" id="' + items[i] + 'Field" name="formMoney"   oninput="updateCart()" <img src="' + items[i] + '.jpg"> <br><br>')
@@ -23,22 +28,26 @@ for (let i = 0; i < items.length; i++) {
 /****************************
 Functions:
 ****************************/
+
+//Calculate change function
 function calculateChange(_money, _price) {
   let change = _money - _price;
   return change;
 }
 
-
+//This gives the reciept 
 function getFormInput() {
   const NAME_FIELD = document.getElementById("nameField");
   const MONEY_FIELD = document.getElementById("moneyField");
   let name = NAME_FIELD.value;
 
-  if (/\d/.test(name)) {
+  //checks for numbers and other invalid characters
+  if (!/^[A-Za-z\s]+$/.test(name)) {
     RECEIPT.innerHTML = "<h3>Please use a valid name.</h3>";
     return;
   }
 
+  //Mr. you cant break my code, (You have to put a name)
   if (name === "") {
     RECEIPT.innerHTML = "<h3>Please use a valid name.</h3>";
     return;
@@ -47,11 +56,14 @@ function getFormInput() {
   let money = Number(MONEY_FIELD.value);
   let cost = 0;
 
+  //This interprests the user's order
   for (let i = 0; i < items.length; i++) {
     const menuField = document.getElementById(items[i] + "Field")
     quantities[i] = Number(menuField.value);
     let total = quantities[i] * prices[i]
 
+
+    //This makes it so they can't order a negtive amonut of items 
     if (total < 0) {
       RECEIPT.innerHTML = "<h3>Do not use a negative quantity</h3>";
       return;
@@ -60,14 +72,14 @@ function getFormInput() {
     cost += total
   }
 
-
+  //Mr. you cant break my code, ( of course you need to buy something to order)
 
   if (cost === 0) {
     RECEIPT.innerHTML = "<h3>Please order at least one item.</h3>";
     return;
   }
 
-
+  //The following code in this function is the code that gets printed onto the receipt.
   RECEIPT.innerHTML = "<h3>Name: " + name + "</h3>";
   RECEIPT.innerHTML += "<h4>Here's your receipt: " + "</h4><br>";
 
@@ -88,6 +100,8 @@ function getFormInput() {
   }
 }
 
+
+//This function resets the order and leaves all fields blank
 function resetOrder() {
   document.getElementById("nameField").value = "";
   document.getElementById("moneyField").value = "";
@@ -102,6 +116,7 @@ function resetOrder() {
   updateCart();
 }
 
+//This is stating the carts items
 function updateCart() {
   let total = 0;
   let itemCount = 0;
@@ -124,7 +139,7 @@ function updateCart() {
 }
 
 
-
+//This is the dropdown from the cart items and if the cart is pressed it will activate the updateCart(); function
 function toggleCart() {
   const dropDown = document.getElementById("cartDropdown")
   updateCart();
